@@ -21,8 +21,8 @@ ve_xbest=xxbest-temp(i).rnvec;
 
 %xi-xi,g、xi-xi,p的直线参数方程
 t=rand;   %随机取一点
-P=temp(i).rnvec+t*ve_xgdv;   %P点，xgdv
-Q=temp(i).rnvec+t*ve_xbest;  %Q点，xxbest
+P=xgdv+t*ve_xgdv;   %P点，xgdv
+Q=xxbest+t*ve_xbest;  %Q点，xxbest
 
 rr=randsample(length(xgdv),NN);   
 U=zeros(NN,length(xgdv));
@@ -50,4 +50,5 @@ for j=1:NN
   
 end
   uu=mean(U,1);
+
 end
